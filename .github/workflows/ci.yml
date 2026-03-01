@@ -39,7 +39,7 @@ jobs:
         run: pnpm run lint
 
       - name: Test
-        run: pnpm run ci-test
+        run: pnpm run test
 
   test-action:
     name: GitHub Actions Test

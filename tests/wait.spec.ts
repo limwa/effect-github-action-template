@@ -1,6 +1,7 @@
 /**
  * Unit tests for src/wait.js
  */
+import { describe, it, expect } from 'vitest'
 import { wait } from '../src/wait.js'
 
 describe('wait.js', () => {
