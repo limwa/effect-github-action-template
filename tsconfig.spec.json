@@ -3,7 +3,7 @@
   "compilerOptions": {
     "outDir": "./out-tsc/vitest",
     "tsBuildInfoFile": "./out-tsc/spec/tsconfig.spec.tsbuildinfo",
-    
+
     "types": ["vitest", "vitest/importMeta", "node"],
     "forceConsistentCasingInFileNames": true
   },

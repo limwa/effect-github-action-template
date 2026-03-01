@@ -1,5 +1,5 @@
 /// <reference types='vitest' />
-import { defineConfig } from 'vitest/config';
+import { defineConfig } from 'vitest/config'
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
@@ -21,6 +21,6 @@ export default defineConfig(() => ({
       reportsDirectory: './coverage',
       provider: 'istanbul' as const,
       reporter: ['text', 'html', 'json-summary']
-    },
-  },
-}));
+    }
+  }
+}))

@@ -40,7 +40,9 @@ describe('main.js', () => {
 
   it('Sets a failed status', async () => {
     // Clear the getInput mock and return an invalid value.
-    vi.mocked(core.getInput).mockClear().mockReturnValueOnce('this is not a number')
+    vi.mocked(core.getInput)
+      .mockClear()
+      .mockReturnValueOnce('this is not a number')
 
     // Clear the wait mock and return a rejected promise.
     vi.mocked(wait)
