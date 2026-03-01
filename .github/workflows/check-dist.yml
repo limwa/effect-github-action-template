@@ -27,27 +27,25 @@ jobs:
 
     steps:
       - name: Checkout
-        id: checkout
         uses: actions/checkout@v6
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node.js
-        id: setup-node
         uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
-          cache: npm
-
-      - name: Remove dist/ Directory
-        id: remove-dist
-        run: npx rimraf ./dist
+          cache: pnpm
 
       - name: Install Dependencies
-        id: install
-        run: npm ci
+        run: pnpm install
+
+      - name: Remove dist/ Directory
+        run: pnpm rimraf ./dist
 
       - name: Build dist/ Directory
-        id: build
-        run: npm run bundle
+        run: pnpm run bundle
 
       # This will fail the workflow if the `dist/` directory is different than
       # expected.
@@ -69,7 +67,6 @@ jobs:
       # workflow artifact.
       - if: ${{ failure() && steps.diff.outcome == 'failure' }}
         name: Upload Artifact
-        id: upload
         uses: actions/upload-artifact@v6
         with:
           name: dist

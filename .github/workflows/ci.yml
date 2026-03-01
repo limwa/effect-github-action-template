@@ -18,31 +18,28 @@ jobs:
 
     steps:
       - name: Checkout
-        id: checkout
         uses: actions/checkout@v6
 
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
       - name: Setup Node.js
-        id: setup-node
         uses: actions/setup-node@v6
         with:
           node-version-file: .node-version
-          cache: npm
+          cache: pnpm
 
       - name: Install Dependencies
-        id: npm-ci
-        run: npm ci
+        run: pnpm install
 
       - name: Check Format
-        id: npm-format-check
-        run: npm run format:check
+        run: pnpm run format:check
 
       - name: Lint
-        id: npm-lint
-        run: npm run lint
+        run: pnpm run lint
 
       - name: Test
-        id: npm-ci-test
-        run: npm run ci-test
+        run: pnpm run ci-test
 
   test-action:
     name: GitHub Actions Test
@@ -60,5 +57,4 @@ jobs:
           milliseconds: 2000
 
       - name: Print Output
-        id: output
         run: echo "${{ steps.test-action.outputs.time }}"
