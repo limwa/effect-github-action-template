@@ -16307,12 +16307,12 @@ function error(message, properties = {}) {
 }
 
 //#endregion
-//#region src/wait.js
+//#region src/wait.ts
 /**
 * Waits for a number of milliseconds.
 *
-* @param {number} milliseconds The number of milliseconds to wait.
-* @returns {Promise<string>} Resolves with 'done!' after the wait is over.
+* @param  milliseconds The number of milliseconds to wait.
+* @returns Resolves with 'done!' after the wait is over.
 */
 async function wait(milliseconds) {
 	return new Promise((resolve) => {
@@ -16322,11 +16322,11 @@ async function wait(milliseconds) {
 }
 
 //#endregion
-//#region src/main.js
+//#region src/main.ts
 /**
 * The main function for the action.
 *
-* @returns {Promise<void>} Resolves when the action is complete.
+* @returns Resolves when the action is complete.
 */
 async function run() {
 	try {
