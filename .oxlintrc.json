@@ -1,10 +1,6 @@
 {
   "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": [
-    "jest",
-    "unicorn",
-    "import"
-  ],
+  "plugins": ["jest", "unicorn", "import"],
   "categories": {
     "correctness": "off"
   },
@@ -14,12 +10,7 @@
     "jest": true,
     "node": true
   },
-  "ignorePatterns": [
-    "**/coverage",
-    "**/dist",
-    "**/linter",
-    "**/node_modules"
-  ],
+  "ignorePatterns": ["**/coverage", "**/dist", "**/linter", "**/node_modules"],
   "rules": {
     "constructor-super": "error",
     "for-direction": "error",
