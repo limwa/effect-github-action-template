@@ -47,7 +47,7 @@ jobs:
 
       - uses: licensee/setup-licensed@v1.3.2
         with:
-          version: 4.x
+          version: 5.x
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
       # If this is a workflow_dispatch event, update the cached licenses.

@@ -1,7 +1,7 @@
 # See: https://github.com/licensee/licensed/blob/main/docs/configuration.md
 
 sources:
-  npm: true
+  pnpm: true
 
 allowed:
   - apache-2.0
@@ -13,4 +13,4 @@ allowed:
   - other
 
 ignored:
-  npm: []
+  pnpm: []
