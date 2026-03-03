@@ -16,7 +16,6 @@
     "removeComments": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es2024",
-    "customConditions": ["@limwa/js"]
+    "target": "es2024"
   }
 }
