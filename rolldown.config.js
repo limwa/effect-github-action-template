@@ -11,6 +11,7 @@ export default defineConfig([
       file: 'dist/index.js',
       esModule: true,
       format: 'esm',
+      minify: true,
       sourcemap: true
     }
   }

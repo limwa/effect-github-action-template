@@ -29,7 +29,7 @@ describe('main.js', () => {
   })
 
   it('Sets the time output', async () => {
-    await Effect.runPromise(run)
+    await run()
 
     // Verify the time output was set.
     expect(core.setOutput).toHaveBeenNthCalledWith(
@@ -55,7 +55,7 @@ describe('main.js', () => {
         )
       )
 
-    await Effect.runPromiseExit(run)
+    await run().catch(() => {})
 
     // Verify that the action was marked as failed.
     expect(core.setFailed).toHaveBeenNthCalledWith(

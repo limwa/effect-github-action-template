@@ -29,7 +29,7 @@
     "format:write": "oxfmt",
     "format:check": "oxfmt --check",
     "lint": "oxlint",
-    "local-action": "@github/local-action . src/main.js .env",
+    "local-action": "local-action . dist/index.js .env",
     "typecheck": "tsc --noEmit",
     "package": "rimraf ./dist && rolldown --config rolldown.config.js",
     "package:watch": "node --run package -- --watch",

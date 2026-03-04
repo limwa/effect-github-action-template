@@ -2,12 +2,7 @@ import * as core from '@actions/core'
 import { wait } from './wait.js'
 import { Effect, pipe } from 'effect'
 
-/**
- * The main function for the action.
- *
- * @returns Resolves when the action is complete.
- */
-export const run = pipe(
+const program = pipe(
   Effect.gen(function* () {
     const ms = core.getInput('milliseconds')
 
@@ -29,3 +24,12 @@ export const run = pipe(
     })
   )
 )
+
+/**
+ * The main function for the action.
+ *
+ * @returns Resolves when the action is complete.
+ */
+export async function run() {
+  await Effect.runPromise(program)
+}
