@@ -43,7 +43,7 @@
   },
   "devDependencies": {
     "@github/local-action": "^7.0.1",
-    "@types/node": "^25.3.3",
+    "@types/node": "^25.3.5",
     "@vitest/coverage-istanbul": "4.0.18",
     "make-coverage-badge": "^1.2.0",
     "oxfmt": "^0.36.0",
